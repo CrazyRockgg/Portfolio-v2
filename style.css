@@ -169,6 +169,22 @@ nav {
     filter: brightness(1.1);
 }
 
+/* Mode Button (Light/Dark Toggle) */
+.mode-btn {
+    background-color: transparent;
+    border: 2px solid var(--accent);
+    color: var(--accent);
+    padding: 10px 15px;
+    font-size: 0.9rem;
+    box-shadow: none !important;
+}
+
+.mode-btn:hover {
+    background-color: var(--accent);
+    color: #000;
+    transform: scale(1.05);
+}
+
 /* =========================================
    6. PROJECTS SECTION
    ========================================= */
