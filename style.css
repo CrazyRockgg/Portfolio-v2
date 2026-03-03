@@ -1,0 +1,24 @@
+/* =========================================
+   1. THEME VARIABLES (Dark & Light Mode)
+   ========================================= */
+:root {
+    --bg-dark: #282828;
+    --bg-darker: #222222;
+    --bg-nav: #333;
+    --text-main: linen;
+    --accent: #f1c40f;
+    --card-border: #000;
+    --input-bg: white;
+    --btn-shadow: rgba(0, 0, 0, 0.4);
+}
+
+body.light-theme {
+    --bg-dark: #f4f4f4;
+    --bg-darker: #ffffff;
+    --bg-nav: #eeeeee;
+    --text-main: #222;
+    --accent: #d4ac0d;
+    --card-border: #ddd;
+    --input-bg: #fdfdfd;
+    --btn-shadow: rgba(0, 0, 0, 0.1);
+}
