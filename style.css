@@ -145,3 +145,26 @@ nav {
     flex-wrap: wrap;
     justify-content: center;
 }
+
+/* =========================================
+   5. BUTTONS & HOVERS
+   ========================================= */
+.btn {
+    text-decoration: none;
+    padding: 12px 25px;
+    background-color: var(--accent);
+    color: #000;
+    border-radius: 5px;
+    font-weight: bold;
+    border: none;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 6px var(--btn-shadow);
+    cursor: pointer;
+    display: inline-block;
+}
+
+.btn:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 15px var(--btn-shadow);
+    filter: brightness(1.1);
+}
