@@ -101,3 +101,47 @@ nav {
 
 .nav-toggle-label span::before { bottom: 8px; }
 .nav-toggle-label span::after { top: 8px; }
+
+/* =========================================
+   4. HERO SECTION
+   ========================================= */
+.hero {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 40px; /* Space between Title, Text, and Buttons */
+    padding: 100px 20px;
+    background-color: var(--bg-dark);
+    text-align: center;
+    min-height: 85vh;
+}
+
+.main-title {
+    font-size: clamp(2rem, 8vw, 3.5rem);
+    color: var(--text-main);
+}
+
+.hero-text {
+    max-width: 800px;
+}
+
+/* Gradient text styling */
+.gradient-text {
+    background-image: linear-gradient(to right, #f3ec78, #af4261);
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+    color: transparent;
+    font-weight: bold;
+    font-size: clamp(1.1rem, 3vw, 1.8rem);
+    display: block;
+    margin-bottom: 5px;
+}
+
+.cta {
+    display: flex;
+    gap: 20px;
+    flex-wrap: wrap;
+    justify-content: center;
+}
