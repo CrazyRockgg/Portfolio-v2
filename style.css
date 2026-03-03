@@ -262,3 +262,38 @@ input:focus, textarea:focus {
     outline: none;
     border-color: var(--accent);
 }
+
+/* =========================================
+   8. RESPONSIVE QUERIES
+   ========================================= */
+@media (max-width: 768px) {
+    /* Show Hamburger */
+    .nav-toggle-label { display: block; }
+
+    .nav-links {
+        position: absolute;
+        top: 100%;
+        left: 0;
+        width: 100%;
+        background: var(--bg-nav);
+        flex-direction: column;
+        padding: 30px 0;
+        gap: 20px;
+        /* Mobile menu animation */
+        clip-path: circle(0px at top right);
+        transition: clip-path 0.5s ease-in-out;
+    }
+
+    .nav-toggle:checked ~ .nav-links {
+        clip-path: circle(150% at top right);
+    }
+
+    .hero {
+        padding: 60px 20px;
+        gap: 30px;
+    }
+
+    .section-title {
+        font-size: 2rem;
+    }
+}
