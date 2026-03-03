@@ -52,6 +52,7 @@ nav {
     display: flex;
     justify-content: space-between;
     align-items: center;
+    flex-wrap: wrap;
     padding: 20px 5%;
     background-color: var(--bg-nav);
     position: sticky;
@@ -61,16 +62,28 @@ nav {
     gap: 15px;
 }
 
+.logo {
+    flex: 0 0 auto;
+}
+
 .nav-links {
     display: flex;
     list-style: none;
     align-items: center;
     gap: 15px;
+    flex: 1 1 auto;
+    justify-content: flex-end;
 }
 
 .nav-links a {
     text-decoration: none;
     color: inherit;
+}
+
+/* Theme toggle button */
+#theme-toggle {
+    flex: 0 0 auto;
+    z-index: 999;
 }
 
 /* Hamburger Logic */
@@ -80,6 +93,8 @@ nav {
     display: none;
     cursor: pointer;
     padding: 10px;
+    flex: 0 0 auto;
+    z-index: 1001;
 }
 
 .nav-toggle-label span,
@@ -285,11 +300,25 @@ input:focus, textarea:focus {
    ========================================= */
 @media (max-width: 768px) {
     nav {
-        flex-wrap: wrap;
+        position: relative;
     }
 
-    /* Show Hamburger */
-    .nav-toggle-label { display: block; }
+    .logo {
+        flex: 1 1 auto;
+        order: 1;
+    }
+
+    /* Show Hamburger and move it to the right */
+    .nav-toggle-label {
+        display: block;
+        order: 2;
+    }
+
+    /* Theme button stays on the right in nav header */
+    #theme-toggle {
+        order: 3;
+        margin-left: auto;
+    }
 
     .nav-links {
         position: absolute;
@@ -300,6 +329,7 @@ input:focus, textarea:focus {
         flex-direction: column;
         padding: 30px 0;
         gap: 20px;
+        justify-content: flex-start;
         /* Mobile menu animation */
         clip-path: circle(0px at top right);
         transition: clip-path 0.5s ease-in-out;
@@ -309,12 +339,6 @@ input:focus, textarea:focus {
         clip-path: circle(150% at top right);
     }
 
-    /* Keep theme button always visible and accessible on mobile */
-    #theme-toggle {
-        order: 3;
-        flex-basis: 100%;
-        margin-top: 10px;
-    }
 
     .hero {
         padding: 60px 20px;

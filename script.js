@@ -1,4 +1,5 @@
 const themeBtn = document.getElementById('theme-toggle');
+const navToggle = document.getElementById('nav-toggle');
 
 // Load saved theme preference on page load
 window.addEventListener('DOMContentLoaded', () => {
@@ -12,7 +13,10 @@ window.addEventListener('DOMContentLoaded', () => {
 });
 
 // Toggle theme and save preference
-themeBtn.addEventListener('click', () => {
+themeBtn.addEventListener('click', (e) => {
+    e.stopPropagation();
+    e.preventDefault();
+
     document.body.classList.toggle('light-theme');
 
     if (document.body.classList.contains('light-theme')) {
@@ -22,4 +26,9 @@ themeBtn.addEventListener('click', () => {
         localStorage.setItem('theme-preference', 'dark');
         themeBtn.textContent = '☀️ Light Mode';
     }
+});
+
+// Close mobile menu when clicking the theme button
+themeBtn.addEventListener('click', () => {
+    navToggle.checked = false;
 });
