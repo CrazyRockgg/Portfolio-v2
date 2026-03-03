@@ -22,3 +22,24 @@ body.light-theme {
     --input-bg: #fdfdfd;
     --btn-shadow: rgba(0, 0, 0, 0.1);
 }
+
+/* =========================================
+   2. BASE STYLES
+   ========================================= */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+    transition: background 0.3s ease, color 0.3s ease;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    background-color: var(--bg-dark);
+    color: var(--text-main);
+    line-height: 1.6;
+}
